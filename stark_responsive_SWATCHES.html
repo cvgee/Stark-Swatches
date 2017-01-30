@@ -68,6 +68,36 @@
       text-align: center !important;
       margin: 0 auto !important;
     }  
+
+    .desktop_nav {
+      display: none !important;
+    }
+
+    .desktop_nav a {
+      overflow: hidden !important;
+      display: none !important;
+      visibility: hidden !important;
+      font-size: 0 !important;
+      width: 0 !important;
+      max-width: 0 !important;
+      height: 0 !important;
+      max-height: 0 !important;
+      line-height: 0 !important;
+      mso-hide:all !important;
+    }
+
+    .mobile_nav {
+      visibility: visible !important;
+      display: inline !important;
+      overflow: hidden !important;
+      font-size: 12px !important;
+      width: 100% !important;
+      max-height: none !important;
+      font-family: Arial !important; 
+      text-transform: uppercase !important;
+      font-weight: bold !important; 
+      text-decoration: none !important;
+    }    
     
     td.fiftypercent img {
       width: 100% !important;
@@ -168,7 +198,7 @@ SET @URL_Unsubscribe = Concat('https://www.onekingslane.com/my_account/email-pre
         <!-- BEGIN LOGO -->
         <tr> 
           <td colspan="5" width="100%" style="text-align:center;"> 
-            <a href="%%=RedirectTo(Concat('https://www.onekingslane.com?utm_source=SBR&utm_medium=Email&utm_campaign=', jobid , '&utm_content=', @date_str, '.',  _subscriberkey, '.', @Email_Type, '&utm_term=Header.Logo'))=%%">
+            <a href="%%=RedirectTo(Concat('https://www.onekingslane.com?utm_source=ProductSpotlight&utm_medium=Email&utm_campaign=', jobid , '&utm_content=', @date_str, '.',  _subscriberkey, '.', @Email_Type, '&utm_term=Header.Logo'))=%%">
               <div class="logo">
                 <img src="https://okl.scene7.com/is/image/OKL/email_mobile_header_50x406?fmt=gif&wid=406&qlt=100,0" border="0" id="mobile_header"/>
               </div>
@@ -186,23 +216,23 @@ SET @URL_Unsubscribe = Concat('https://www.onekingslane.com/my_account/email-pre
 
         <!-- BEGIN NAV -->
         <tr> 
-          <!-- BEGIN CLEARANCE -->
+          <!-- BEGIN SHOP -->
           <td width="217" height="25" style="text-align:center; vertical-align: middle"> 
 
-            <div class="d nav" width="100%" align="right" style="text-align:center;">
-              <a href="%%=RedirectTo(Concat('https://www.onekingslane.com/c/clearance?utm_source=SBR&utm_medium=Email&utm_campaign=', jobid, '&utm_content=', @date_str, '.', _subscriberkey, '.', @Email_Type, '&utm_term=Menu.NewClearance.Desktop'))=%%" style="font-weight: bold; text-decoration: none; color: #000000; font-size: 11px; font-family: Arial; text-transform: uppercase;">
-                SHOP Sale
+            <div class="desktop_nav" width="100%" align="right" style="text-align:center;">
+              <a href="%%=RedirectTo(Concat('https://www.onekingslane.com/?utm_source=ProductSpotlight&utm_medium=Email&utm_campaign=', jobid, '&utm_content=', @date_str, '.', _subscriberkey, '.', @Email_Type, '&utm_term=Menu.Shop.Desktop'))=%%" style="font-weight: bold; text-decoration: none; color: #000000; font-size: 11px; font-family: Arial; text-transform: uppercase;">
+                SHOP
               </a> 
             </div> 
 
-            <div class="m nav" style="width:0; max-height:0; display:none; float: left; mso-hide:all; overflow:hidden; font-size: 0px;">
-              <a href="%%=RedirectTo(Concat('https://www.onekingslane.com/c/clearance?utm_source=SBR&utm_medium=Email&utm_campaign=', jobid, '&utm_content=', @date_str, '.', _subscriberkey, '.', @Email_Type, '&utm_term=Menu.NewClearance.Mobile'))=%%" style=" text-decoration: none; color: #000000; text-transform: uppercase;">
-                SHOP Sale
+            <div class="mobile_nav" style="width:0; max-height:0; display:none; float: left; mso-hide:all; overflow:hidden; font-size: 0px;">
+              <a href="%%=RedirectTo(Concat('https://www.onekingslane.com/?utm_source=ProductSpotlight&utm_medium=Email&utm_campaign=', jobid, '&utm_content=', @date_str, '.', _subscriberkey, '.', @Email_Type, '&utm_term=Menu.Shop.Mobile'))=%%" style="text-decoration: none; color: #000000; text-transform: uppercase;">
+                SHOP
               </a> 
             </div> 
 
           </td> 
-          <!-- END CLEARANCE -->
+          <!-- END SHOP -->
 
           <!-- BEGIN DIVIDER BAR -->
           <td class="min_width">
@@ -210,23 +240,23 @@ SET @URL_Unsubscribe = Concat('https://www.onekingslane.com/my_account/email-pre
           </td> 
           <!-- END DIVIDER BAR -->
 
-          <!-- BEGIN STYLE GUIDE -->
+          <!-- BEGIN OUR STYLE GUIDE -->
           <td width="217" height="25" style="text-align:center; vertical-align: middle;"> 
 
-            <div class="d nav" width="100%" align="right" style="text-align:center;">
-              <a href="%%=RedirectTo(Concat('https://www.onekingslane.com/room?utm_source=SBR&utm_medium=Email&utm_campaign=', jobid, '&utm_content=', @date_str, '.', _subscriberkey, '.', @Email_Type, '&utm_term=Menu.RoomGuide.Desktop'))=%%" style="font-weight: bold; text-decoration: none; color: #000000; font-size: 11px; font-family: Arial; text-transform: uppercase;">
-                Shop by room
+            <div class="desktop_nav" width="100%" align="right" style="text-align:center;">
+              <a href="%%=RedirectTo(Concat('https://www.onekingslane.com/room?utm_source=ProductSpotlight&utm_medium=Email&utm_campaign=', jobid, '&utm_content=', @date_str, '.', _subscriberkey, '.', @Email_Type, '&utm_term=Menu.StyleGuide.Desktop'))=%%" style="font-weight: bold; text-decoration: none; color: #000000; font-size: 11px; font-family: Arial; text-transform: uppercase;">
+                Our Style Guide
               </a> 
             </div> 
 
-            <div class="m nav" style="width:0; max-height:0; display:none; float: left; mso-hide:all; overflow:hidden; font-size: 0px; text-transform: uppercase;">
-              <a href="%%=RedirectTo(Concat('https://www.onekingslane.com/room?utm_source=SBR&utm_medium=Email&utm_campaign=', jobid, '&utm_content=', @date_str, '.', _subscriberkey, '.', @Email_Type, '&utm_term=Menu.RoomGuide.Mobile'))=%%">
-                Shop by Room
+            <div class="mobile_nav" style="width:0; max-height:0; display:none; float: left; mso-hide:all; overflow:hidden; font-size: 0px; text-transform: uppercase;">
+              <a href="%%=RedirectTo(Concat('https://www.onekingslane.com/room?utm_source=ProductSpotlight&utm_medium=Email&utm_campaign=', jobid, '&utm_content=', @date_str, '.', _subscriberkey, '.', @Email_Type, '&utm_term=Menu.StyleGuide.Mobile'))=%%" style="text-decoration: none; color: #000000; text-transform: uppercase;">
+                Our Style Guide
               </a> 
             </div> 
 
           </td> 
-          <!-- END STYLE GUIDE -->
+          <!-- END OUR STYLE GUIDE -->
 
           <!-- BEGIN DIVIDER BAR -->
           <td class= "min_width">
@@ -234,23 +264,23 @@ SET @URL_Unsubscribe = Concat('https://www.onekingslane.com/my_account/email-pre
           </td> 
           <!-- END DIVIDER BAR -->
 
-          <!-- BEGIN SALES -->
+          <!-- BEGIN SALE -->
           <td width="217" height="25" style="text-align:center; vertical-align: middle"> 
 
-            <div class="d nav" width="100%" align="right" style="text-align:center;">
-              <a href="%%=RedirectTo(Concat('https://www.onekingslane.com?utm_source=SBR&utm_medium=Email&utm_campaign=', jobid, '&utm_content=', @date_str, '.', _subscriberkey, '.', @Email_Type, '&utm_term=Menu.ShopAll.Desktop'))=%%" style="font-weight: bold; text-decoration: none; color: #000000; font-size: 11px; font-family: Arial; text-transform: uppercase;">
-                SHOP ALL
+            <div class="desktop_nav" width="100%" align="right" style="text-align:center;">
+              <a href="%%=RedirectTo(Concat('https://www.onekingslane.com/sale?utm_source=ProductSpotlight&utm_medium=Email&utm_campaign=', jobid, '&utm_content=', @date_str, '.', _subscriberkey, '.', @Email_Type, '&utm_term=Menu.Sale.Desktop'))=%%" style="font-weight: bold; text-decoration: none; color: #000000; font-size: 11px; font-family: Arial; text-transform: uppercase;">
+                SALE
               </a> 
             </div> 
 
-            <div class="m nav" style="width:0; max-height:0; display:none; float: left; mso-hide:all; overflow:hidden; font-size: 0px; text-transform: uppercase;" >
-              <a href="%%=RedirectTo(Concat('https://www.onekingslane.com?utm_source=SBR&utm_medium=Email&utm_campaign=', jobid, '&utm_content=', @date_str, '.', _subscriberkey, '.', @Email_Type, '&utm_term=Menu.ShopAll.Mobile'))=%%">
-                Shop ALL
+            <div class="mobile_nav" style="width:0; max-height:0; display:none; float: left; mso-hide:all; overflow:hidden; font-size: 0px; text-transform: uppercase;" >
+              <a href="%%=RedirectTo(Concat('https://www.onekingslane.com/sale?utm_source=ProductSpotlight&utm_medium=Email&utm_campaign=', jobid, '&utm_content=', @date_str, '.', _subscriberkey, '.', @Email_Type, '&utm_term=Menu.Sale.Mobile'))=%%" style="text-decoration: none; color: #000000; text-transform: uppercase;">
+                SALE
               </a> 
             </div> 
 
           </td> 
-          <!-- BEGIN SALES -->
+          <!-- END SALE -->
         </tr>           
     
 
@@ -461,7 +491,7 @@ SET @URL_Unsubscribe = Concat('https://www.onekingslane.com/my_account/email-pre
                       <br /> 
                       <br /><font style="color: #999; font-family:Helvetica, sans-serif, Arial; font-size: 9px;padding-bottom: 5px;display: block;">Tastemaker Tag Sales&trade; is a trademark of One Kings Lane Inc.  Corp.  Address: 633 Folsom Street, Suite 200 San Francisco, CA 94107</font> 
                       <br> 
-                      <br><a href="https://www.onekingslane.com/privacy?utm_source=ProductSpotlight&utm_medium=Launch&utm_campaign=v(jobid)&utm_content=%%=v(@date_str)=%%.%%_subscriberkey%%.%%=v(@Email_Type)=%%&utm_term=Footer.PrivacyPolicy" style="text-decoration:none; color: #999; font-size: 10px;">PRIVACY POLICY</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.onekingslane.com/contact-us?utm_source=ProductSpotlight&utm_medium=Launch&utm_campaign=v(jobid)&utm_content=%%=v(@date_str)=%%.%%_subscriberkey%%.%%=v(@Email_Type)=%%&utm_term=Footer.ContactUs"  style="text-decoration:none; color: #999; font-size: 10px;">CONTACT US</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.onekingslane.com/corporate/careers/?utm_source=ProductSpotlight&utm_medium=Launch&utm_campaign=v(jobid)&utm_content=%%=v(@date_str)=%%.%%_subscriberkey%%.%%=v(@Email_Type)=%%&utm_term=Footer.Hiring"  style="text-decoration:none; color: #999; font-size: 10px;">HIRING</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="%%=RedirectTo(v(@URL_Unsubscribe))=%%"  style="text-decoration:none; color: #999; font-size: 10px;">UNSUBSCRIBE</a> 
+                      <br><a href="https://www.onekingslane.com/privacy?utm_source=ProductSpotlight&utm_medium=Email&utm_campaign=v(jobid)&utm_content=%%=v(@date_str)=%%.%%_subscriberkey%%.%%=v(@Email_Type)=%%&utm_term=Footer.PrivacyPolicy" style="text-decoration:none; color: #999; font-size: 10px;">PRIVACY POLICY</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.onekingslane.com/contact-us?utm_source=ProductSpotlight&utm_medium=Email&utm_campaign=v(jobid)&utm_content=%%=v(@date_str)=%%.%%_subscriberkey%%.%%=v(@Email_Type)=%%&utm_term=Footer.ContactUs"  style="text-decoration:none; color: #999; font-size: 10px;">CONTACT US</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="https://www.onekingslane.com/corporate/careers/?utm_source=ProductSpotlight&utm_medium=Email&utm_campaign=v(jobid)&utm_content=%%=v(@date_str)=%%.%%_subscriberkey%%.%%=v(@Email_Type)=%%&utm_term=Footer.Hiring"  style="text-decoration:none; color: #999; font-size: 10px;">HIRING</a>&nbsp;&nbsp;|&nbsp;&nbsp;<a href="%%=RedirectTo(v(@URL_Unsubscribe))=%%"  style="text-decoration:none; color: #999; font-size: 10px;">UNSUBSCRIBE</a> 
                     </td> 
                   </tr> 
                   <tr> 
